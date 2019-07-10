@@ -1,0 +1,23 @@
+{
+  "name": "oop-farm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julenia/oop-farm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julenia/oop-farm/issues"
+  },
+  "homepage": "https://github.com/julenia/oop-farm#readme",
+  "dependencies": {
+    "jest": "^24.8.0"
+  }
+}
