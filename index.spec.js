@@ -42,12 +42,14 @@ test('The income of a 100 Wheat + 100 Sugarcane farm is X', () => {
   })
 
   test('Final test of all the elements, income of 100 of each parts of inventory', () =>{
-      const farm = new Farm()
+      const farm = new Farm('My Farm')
       farm.addCrop(new Wheat(100))
       farm.addCrop(new Sugarcane((100)))
       farm.addAnimal(new Pig(100))
       farm.addAnimal(new Cow(100))
       farm.addAnimal(new Horse(100))
       expect(farm.calculateIncome()).toBeCloseTo(5288.37, 1)
+      console.log('Farm: ' + farm.name +'\n' + 'No of corps: ' + farm.crops.length + '\n'+ 'No of animals: ' + farm.animals.length+ '\n' + 'Income: ' + farm.calculateIncome())
 
   })
+  
