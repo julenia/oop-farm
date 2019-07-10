@@ -40,3 +40,18 @@ test('A crop can store its area size', () => {
     const sugarcane = new Sugarcane(0)
     expect(sugarcane.getYieldInEuros()).toBe(0)
   })
+
+  test('Sugarcane class calculates the proper costs value', () => {
+    const sugarcane = new Sugarcane(0)
+    expect(sugarcane.getCosts()).toBe(0)
+  })
+  
+  test('Sugarcane class calculates the proper costs value', () => {
+    const sugarcane = new Sugarcane(456)
+    expect(sugarcane.getCosts()).toBe(75696)
+  })
+  
+  test('Wheat class calculates the proper costs value', () => {
+    const wheat = new Wheat(123)
+    expect(wheat.getCosts()).toBe(41820)
+  })
