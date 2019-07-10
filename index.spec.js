@@ -1,6 +1,7 @@
 // index.spec.js
 const {Farm} = require('./index')
 const {Wheat, Sugarcane} = require('./crops')
+const {Pig, Cow, Horse} = require('./animals')
 
 test('A new Farm can be created', () => {
   const farm = new Farm()
@@ -27,4 +28,26 @@ test('The income of a 100 Wheat + 100 Sugarcane farm is X', () => {
     farm.addCrop(new Wheat(100))
     farm.addCrop(new Sugarcane(100))
     expect(farm.calculateIncome()).toBeCloseTo(1918.37, 1)
+  })
+
+  test('Animals can be added to the farm', () => {
+    const farm = new Farm()
+    farm.addAnimal(new Cow(100))
+  })
+  
+  test('Animals will be taken into account for calculateIncome', () => {
+    const farm = new Farm()
+    farm.addAnimal(new Cow(100))
+    expect(farm.calculateIncome()).not.toBe(0)
+  })
+
+  test('Final test of all the elements, income of 100 of each parts of inventory', () =>{
+      const farm = new Farm()
+      farm.addCrop(new Wheat(100))
+      farm.addCrop(new Sugarcane((100)))
+      farm.addAnimal(new Pig(100))
+      farm.addAnimal(new Cow(100))
+      farm.addAnimal(new Horse(100))
+      expect(farm.calculateIncome()).toBeCloseTo(5288.37, 1)
+
   })

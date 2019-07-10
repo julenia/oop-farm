@@ -3,7 +3,7 @@ class Animal {
         this.age = age
     }
     getValueInEuros(){
-        return this.getWeightinKg() * this.price
+        return this.getWeightInKg() * this.price
     }
 
 }
